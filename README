@@ -1,0 +1,16 @@
+# To create mysql table
+1. Run CreateSalesTable.sh script
+2. Run InsertRecords.sh script
+
+# To start express server
+1. Run "npm install"
+2. Start server with "npm start"
+
+# To start react app
+1. Run "npm install"
+2. Start app with "npm start"
+
+The data is stored in a mysql database in a table named Sales.
+The data is retrieved from the mysql database using an express server, specifically the getSalesByRow endpoint.
+The data is presented in a grid using the react-virtualized library to minimize the amount of data rendered on the screen.
+The data can be searched through and sorted in ascending order using any column.
