@@ -1,0 +1,13 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SearchField {
+  margin: 20;
+}
+
+#oddTableColumn {
+  background-color: gray;
+}
