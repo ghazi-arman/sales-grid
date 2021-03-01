@@ -64,27 +64,29 @@ function App() {
  
   return (
     <div className="App">
-      <TextField
-        style={{ margin: 20 }}
-        label="Search"
-        value={query}
-        onChange={handleSearch}
-      />
+      <div className="SearchDiv">
+        <TextField
+          style={{ margin: 20 }}
+          label="Search"
+          value={query}
+          onChange={handleSearch}
+        />
+      </div>
       <Table
-        width={1200}
-        height={1000}
+        width={window.innerWidth}
+        height={window.innerHeight}
         headerHeight={30}
         rowHeight={30}
         rowCount={visibleSales.length}
         rowGetter={({index}) => visibleSales[index]}
         rowStyle={rowStyler}
         sort={sortTable}>
-        <Column width={200} label="Order ID" dataKey="OrderID" />
-        <Column width={200} label="Country" dataKey="Country" />
-        <Column width={200} label="Item Type" dataKey="ItemType" />
-        <Column width={200} label="Order Date" dataKey="OrderDate" />
-        <Column width={200} label="Ship Date" dataKey="ShipDate" />
-        <Column width={200} label="Total Cost" dataKey="TotalCost" />
+        <Column width={window.innerWidth / 6} label="Order ID" dataKey="OrderID" />
+        <Column width={window.innerWidth / 6} label="Country" dataKey="Country" />
+        <Column width={window.innerWidth / 6} label="Item Type" dataKey="ItemType" />
+        <Column width={window.innerWidth / 6} label="Order Date" dataKey="OrderDate" />
+        <Column width={window.innerWidth / 6} label="Ship Date" dataKey="ShipDate" />
+        <Column width={window.innerWidth / 6} label="Total Cost" dataKey="TotalCost" />
       </Table>
     </div>
   );
